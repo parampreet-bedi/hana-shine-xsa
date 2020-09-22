@@ -38,7 +38,7 @@ If the services are stopped, please contact the system administrator to start th
 - Launch SAP Web IDE for SAP HANA.
 
 - Navigate to File->Git->Clone Repository
-- Enter the URL of the repository as [https://github.com/SAP/hana-shine-xsa.git](https://github.com/SAP/hana-shine-xsa.git)
+- Enter the URL of the repository as [https://github.com/SAP-samples/hana-shine-xsa.git](https://github.com/SAP-samples/hana-shine-xsa.git)
 
 - Create the xs-security.json file manually via CLI by copy pasting contents from the xs-security.json file in the repository.
 
