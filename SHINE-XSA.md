@@ -124,8 +124,8 @@ After doing the above steps,
 1. If you want to do a duplicate deployment in a different space then before creating mtar, change the schema name in mta.yaml under both shine-container and shine-user-container resources.
 
 2. Undeploying an existing deployment can be done by obtaining its mta-id:-
-    `xs mtas`
-    `xs undeploy <mta-id> --delete-services`
+    - `xs mtas`
+    - `xs undeploy <mta-id> --delete-services`
 
 ## Troubleshooting
 
