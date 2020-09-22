@@ -132,55 +132,55 @@ modules:
       - name: secureStore
       - name: shine-auditlog
 
-  # - name: shine-site-web
-  #   type: javascript.nodejs
-  #   path: site-web
-  #   requires:
-  #     - name: shine-uaa
-  #     - name: sap-portal-services-host
-  #     - name: controller
-  #       group: destinations
-  #       properties:
-  #         name: controller
-  #         url: ~{url}
-  #         forwardAuthToken: true
-  #     - name: core_node_api
-  #       group: destinations
-  #       properties:
-  #         name: core-node-backend
-  #         url: ~{url}
-  #         forwardAuthToken: true
-  #     - name: core_xsjs_api
-  #       group: destinations
-  #       properties:
-  #         name: core-xsjs-backend
-  #         url: ~{url}
-  #         forwardAuthToken: true
-  #     - name: user_xsjs_api
-  #       group: destinations
-  #       properties:
-  #         name: user-backend
-  #         url: ~{url}
-  #         forwardAuthToken: true
-  #     - name: uaa 
-  #       group: destinations 
-  #       properties: 
-  #         name: uaa 
-  #         url: ~{url} 
-  #         forwardAuthToken: true
-  #     - name: sapui5-provider
-  #   properties:
-  #     NODE_TLS_REJECT_UNAUTHORIZED: "0"
-  #     httpHeaders: "[{\"Content-Security-Policy\" : \"style-src 'self' 'unsafe-inline' https://sapui5.hana.ondemand.com  https://*.api.here.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://sapui5.hana.ondemand.com https://*.api.here.com; connect-src 'self' https://sapui5.hana.ondemand.com  https://*.api.here.com\"}]"
+  - name: shine-site-web
+    type: javascript.nodejs
+    path: site-web
+    requires:
+      - name: shine-uaa
+      - name: sap-portal-services-host
+      - name: controller
+        group: destinations
+        properties:
+          name: controller
+          url: ~{url}
+          forwardAuthToken: true
+      - name: core_node_api
+        group: destinations
+        properties:
+          name: core-node-backend
+          url: ~{url}
+          forwardAuthToken: true
+      - name: core_xsjs_api
+        group: destinations
+        properties:
+          name: core-xsjs-backend
+          url: ~{url}
+          forwardAuthToken: true
+      - name: user_xsjs_api
+        group: destinations
+        properties:
+          name: user-backend
+          url: ~{url}
+          forwardAuthToken: true
+      - name: uaa 
+        group: destinations 
+        properties: 
+          name: uaa 
+          url: ~{url} 
+          forwardAuthToken: true
+      - name: sapui5-provider
+    properties:
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+      httpHeaders: "[{\"Content-Security-Policy\" : \"style-src 'self' 'unsafe-inline' https://sapui5.hana.ondemand.com  https://*.api.here.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://sapui5.hana.ondemand.com https://*.api.here.com; connect-src 'self' https://sapui5.hana.ondemand.com  https://*.api.here.com\"}]"
 
-  # - name: shine-site-content
-  #   type: com.sap.portal.site-content
-  #   path: site-content
-  #   requires:
-  #     - name: sap-portal-services-client
-  #     - name: shine-uaa
-  #   properties:
-  #     NODE_TLS_REJECT_UNAUTHORIZED: "0"
+  - name: shine-site-content
+    type: com.sap.portal.site-content
+    path: site-content
+    requires:
+      - name: sap-portal-services-client
+      - name: shine-uaa
+    properties:
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
 
 resources:
   - name: shine-user-container
